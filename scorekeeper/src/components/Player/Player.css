@@ -1,1 +1,12 @@
-/* Player__name, Player__score, Player__button */
+.Player__name {
+    font: bold;
+    font-size: 20px;
+    background-color: aqua;
+}
+
+.Player__button, .Player__score {
+    font: bold;
+    font-size: 20px;
+    background-color: aqua;
+    margin: 4px;
+}

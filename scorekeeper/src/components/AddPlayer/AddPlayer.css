@@ -1,0 +1,11 @@
+.AddPlayer{
+    margin: 10px;
+}
+
+.AddPlayer__input{
+    border: 1px solid black;
+}
+
+.AddPlayer__submit{
+    border: 1px solid black;
+}

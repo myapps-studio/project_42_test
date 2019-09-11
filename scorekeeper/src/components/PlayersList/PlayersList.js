@@ -2,6 +2,7 @@ import React from 'react';
 import Player from '../Player/Player';
 import './PlayersList.css';
 
+
 const PlayersList = (props) => (
    <ul className="PlayersList">
        {props.players.map((player, i) => (

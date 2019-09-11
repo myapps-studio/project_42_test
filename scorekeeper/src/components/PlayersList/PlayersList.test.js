@@ -47,3 +47,4 @@ it('onScoreUpdate', () => {
     onPlayerScoreChange(10);
     expect(mockedOnScoreUpdate).toBeCalledWith(0, 10);
 });
+
