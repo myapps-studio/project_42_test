@@ -3,6 +3,7 @@ import './App.css';
 import PlayersList from './components/PlayersList/PlayersList';
 import AddPlayer from './components/AddPlayer/AddPlayer';
 
+
 class App extends Component {
  constructor() {
    super();
@@ -42,11 +43,19 @@ class App extends Component {
   })
 }
 
+onPlayerRemove = () => {
+  this.state.players.filter(players => players.name !== players.name)
+}
+
  render() {
    return (
      <div className="App">
        <AddPlayer onPlayerAdd={this.onPlayerAdd} />
-       <PlayersList players={this.state.players} onScoreUpdate={this.onScoreUpdate}/>
+       <PlayersList 
+          players={this.state.players} 
+          onScoreUpdate={this.onScoreUpdate}
+          onPlayerRemove={this.onPlayerRemove}
+        />
      </div>
    );
  }
