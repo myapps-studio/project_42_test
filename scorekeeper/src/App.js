@@ -44,7 +44,9 @@ class App extends Component {
 }
 
 onPlayerRemove = () => {
-  this.state.players.filter(players => players.name !== players.name)
+  this.setState({
+    players: this.state.players.filter(players => players.name !== players.name)
+  })
 }
 
  render() {
