@@ -56,7 +56,7 @@ onPlayerRemove = (name) => {
        <PlayersList 
           players={this.state.players} 
           onScoreUpdate={this.onScoreUpdate}
-          onPlayerRemove={this.onPlayerRemove}
+          onPlayerRemove={this.onPlayerRemove} 
         />
      </div>
    );

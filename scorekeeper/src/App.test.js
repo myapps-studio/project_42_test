@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import App  from './App';
 import PlayersList from './components/PlayersList/PlayersList';
 import AddPlayer from './components/AddPlayer/AddPlayer';
 
@@ -17,7 +17,7 @@ it('should update player score', () => {
   const playersAfterUpdate = appComponent.state('players');
   playersAfterUpdate[0].score
 
-  // napisanie asercji ??
+  expect(players.score).toEqual(playersAfterUpdate[0].score);
 });
 
 it('renders without crashing', () => {
