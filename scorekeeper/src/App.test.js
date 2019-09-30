@@ -9,7 +9,10 @@ it('renders without crashing', () => {
 });
 
 it('should update player score', () => {
-  shallow(<App players={[]} />);
+  
+  const playerScore = 1;
+  const appComponent = shallow(<App players={[]} />);
+
   appComponent.setState({ players });
   const onScoreUpdate = appComponent.find(PlayersList).prop('onScoreUpdate');
   onScoreUpdate(0, 5);
@@ -17,11 +20,13 @@ it('should update player score', () => {
   const playersAfterUpdate = appComponent.state('players');
   playersAfterUpdate[0].score
 
-  expect(players.score).toEqual(playersAfterUpdate[0].score);
+  expect(playerScore).toEqual(playersAfterUpdate[0].score);
 });
 
-it('renders without crashing', () => {
-  shallow(<App />);
+it('should add player', () => {
+  //shallow(<App />);
+  const appComponent = shallow(<App />);
+
   const onPlayerAdd = appComponent.find(AddPlayer).prop('onPlayerAdd');
   onPlayerAdd('Ania');
 
