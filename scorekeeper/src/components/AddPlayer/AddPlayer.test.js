@@ -1,12 +1,13 @@
-import AddPlayers from './AddPlayers';
+import AddPlayer from './AddPlayer';
 import React from 'react';
 import { shallow } from 'enzyme';
 
 it('renders without crashing', () => {
-    shallow(<AddPlayers players={[]} />);
+    shallow(<AddPlayer players={[]} />);
 });
 
 it('test', () => {
+    shallow(<AddPlayer/>);
     const onPlayerAdd = jest.fn();
     const addPlayerComponent = mount(<AddPlayer onPlayerAdd={onPlayerAdd} />);
     const nameInput = addPlayerComponent.find('input').first().getDOMNode();

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import PlayersList from './components/PlayersList/PlayersList';
 import AddPlayer from './components/AddPlayer/AddPlayer';
-
+ 
 
 class App extends Component {
  constructor() {
@@ -47,7 +47,7 @@ onPlayerRemove = (name) => {
   this.setState({
     players: this.state.players.filter(players => players.name !== name)
   })
-}
+} 
 
  render() {
    return (

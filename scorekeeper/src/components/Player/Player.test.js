@@ -15,7 +15,7 @@ it('renders correct name', () => {
 // test dla score
 
 it('renders correct score', () => {
-    const playerScorePassed = '2';
+    const playerScorePassed = 2;
     const playerComponent = shallow(<Player score={playerScorePassed} />);
   
     const playerScoreRendered = Number(playerComponent.find('.Player__score').text());

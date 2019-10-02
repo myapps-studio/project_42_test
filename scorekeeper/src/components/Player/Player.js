@@ -1,5 +1,5 @@
 import React from 'react';
-import './Player.css';
+import './Player.css'; 
 
 const Player = (props) => (
   <li className="Player">
@@ -11,4 +11,4 @@ const Player = (props) => (
   </li>
 );
 
-export default Player;
+export default Player; 
