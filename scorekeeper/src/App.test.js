@@ -5,13 +5,15 @@ import PlayersList from './components/PlayersList/PlayersList';
 import AddPlayer from './components/AddPlayer/AddPlayer';
 
 it('renders without crashing', () => {
-  shallow(<App />);
+  shallow(<App />); 
 });
 
 it('should update player score', () => {
   
   const playerScore = 1;
   const appComponent = shallow(<App players={[]} />);
+
+  const players = 'Antoś';
 
   appComponent.setState({ players });
   const onScoreUpdate = appComponent.find(PlayersList).prop('onScoreUpdate');
@@ -38,12 +40,12 @@ it('should add player', () => {
  
 it('should remove player', () => {
 
-  const appComponent = shallow(<App />);
+  const wrapper = shallow(<App />);
 
-  const onPlayerRemove = appComponent.find(App).prop('onPlayerRemove');
+  const onPlayerRemove =  wrapper.find(<PlayersList/>).prop('onPlayerRemove');
   onPlayerRemove('Kunegunda');
 
-  const players = appComponent.state('players');
+  const players =  wrapper.state('players');
   expect(players.length).toEqual(2);
   expect(players[0].name).toEqual('Kunegunda');
   expect(players[0].score).toEqual(5);

@@ -1,6 +1,6 @@
 import PlayersList from './PlayersList';
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow } from 'enzyme'; 
 import Player from '../Player/Player';
 
 it('renders without crashing', () => {

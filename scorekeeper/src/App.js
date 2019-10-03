@@ -12,7 +12,7 @@ class App extends Component {
      players: [
        {
          name: 'Kunegunda',
-         score: 5,
+         score: 5, 
        },
        {
          name: 'Antoś',
