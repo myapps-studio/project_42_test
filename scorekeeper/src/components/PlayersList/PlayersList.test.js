@@ -20,7 +20,7 @@ it('renders correct number of players', () => {
     ]
 
     const playerComponent = shallow(<PlayersList players={players} />);
-    console.log(playerComponent.debug());
+    //console.log(playerComponent.debug());
 
     const expectedPlayersNumber = playerComponent.find(Player).length;
     expect(expectedPlayersNumber).toEqual(2);

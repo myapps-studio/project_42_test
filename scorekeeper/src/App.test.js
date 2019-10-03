@@ -11,12 +11,13 @@ it('renders without crashing', () => {
 it('should update player score', () => {
   
   const playerScore = 1;
-  const appComponent = shallow(<App players={[]} />);
+  const appComponent = shallow(<App/>);
+/*
+  const players = [{name: 'Kunegunda',  score: 5}];
 
-  const players = 'Antoś';
-
-  appComponent.setState({ players });
-  const onScoreUpdate = appComponent.find(PlayersList).prop('onScoreUpdate');
+  appComponent.setState({ players }); */
+  const onScoreUpdate = appComponent.prop('onScoreUpdate');
+  console.log(appComponent.props());
   onScoreUpdate(0, 5);
 
   const playersAfterUpdate = appComponent.state('players');
