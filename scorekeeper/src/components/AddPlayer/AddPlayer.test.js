@@ -1,7 +1,7 @@
 import AddPlayer from './AddPlayer';
 import React from 'react';
 import { shallow, mount } from 'enzyme'; 
-
+ 
 it('renders without crashing', () => {
     shallow(<AddPlayer players={[]} />);
 });

@@ -10,15 +10,17 @@ it('renders without crashing', () => {
 
 it('should update player score', () => {
   
-  const playerScore = 1;
+  const playerScore = 6;
   const appComponent = shallow(<App/>);
 /*
   const players = [{name: 'Kunegunda',  score: 5}];
 
   appComponent.setState({ players }); */
-  const onScoreUpdate = appComponent.prop('onScoreUpdate');
-  console.log(appComponent.props());
-  onScoreUpdate(0, 5);
+  //const onScoreUpdate = appComponent.prop('onScoreUpdate');
+  const onScoreUpdate = appComponent.instance().onScoreUpdate;
+
+  //console.log(appComponent.props());
+  onScoreUpdate(0, 1);
 
   const playersAfterUpdate = appComponent.state('players');
   playersAfterUpdate[0].score
@@ -43,11 +45,11 @@ it('should remove player', () => {
 
   const wrapper = shallow(<App />);
 
-  const onPlayerRemove =  wrapper.find(<PlayersList/>).prop('onPlayerRemove');
+  const onPlayerRemove =  wrapper.find(PlayersList).prop('onPlayerRemove');
   onPlayerRemove('Kunegunda');
 
   const players =  wrapper.state('players');
-  expect(players.length).toEqual(2);
-  expect(players[0].name).toEqual('Kunegunda');
-  expect(players[0].score).toEqual(5);
-});
+  expect(players.length).toEqual(1);
+  expect(players[0].name).toEqual('Antoś');
+  expect(players[0].score).toEqual(0);
+}); 

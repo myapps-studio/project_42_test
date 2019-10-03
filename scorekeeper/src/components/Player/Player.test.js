@@ -14,7 +14,7 @@ it('renders correct name', () => {
  
 // test dla score 
 
-it('renders correct score', () => {
+it('renders correct score', () => { 
     const playerScorePassed = 2;
     const playerComponent = shallow(<Player score={playerScorePassed} />);
   
